@@ -1,0 +1,149 @@
+import { useEffect, useState } from 'react'
+import { NavLink, useLocation } from 'react-router-dom'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Menu, X, CalendarCheck } from 'lucide-react'
+import { Logo } from './Logo'
+import { CALENDLY } from '../lib/config'
+import { useCta } from '../lib/cta-context'
+
+const NAV = [
+  { to: '/', label: 'Home' },
+  { to: '/services', label: 'Services' },
+  { to: '/process', label: 'Process' },
+  { to: '/mentorship', label: 'Mentorship' },
+  { to: '/blog', label: 'Blog' },
+  { to: '/about', label: 'About' },
+]
+
+export function Navbar() {
+  const [scrolled, setScrolled] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const location = useLocation()
+  const { openCta } = useCta()
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    setMobileOpen(false)
+  }, [location.pathname])
+
+  return (
+    <motion.header
+      initial={{ y: -80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+        scrolled ? 'glass-strong shadow-lg shadow-black/20' : 'bg-transparent'
+      }`}
+    >
+      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Logo />
+
+        <div className="hidden items-center gap-1 lg:flex">
+          {NAV.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.to === '/'}
+              className={({ isActive }) =>
+                `rounded-lg px-3.5 py-2 text-sm font-medium transition-colors duration-200 ${
+                  isActive
+                    ? 'text-white'
+                    : 'text-zinc-400 hover:text-white'
+                }`
+              }
+            >
+              {({ isActive }) => (
+                <span className="relative">
+                  {item.label}
+                  {isActive && (
+                    <motion.span
+                      layoutId="nav-pill"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full bg-gradient-to-r from-brand-400 to-accent-400"
+                    />
+                  )}
+                </span>
+              )}
+            </NavLink>
+          ))}
+        </div>
+
+        <div className="hidden items-center gap-3 lg:flex">
+          <button
+            onClick={() => openCta()}
+            className="rounded-xl px-4 py-2 text-sm font-semibold text-zinc-200 transition-colors hover:text-white"
+          >
+            Get a Quote
+          </button>
+          <a
+            href={CALENDLY.url}
+            target="_blank"
+            rel="noreferrer"
+            className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-2.5 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:shadow-glow-cyan hover:brightness-110"
+          >
+            <CalendarCheck className="h-4 w-4 transition-transform duration-300 group-hover:rotate-12" />
+            Book a Call
+          </a>
+        </div>
+
+        <button
+          onClick={() => setMobileOpen((v) => !v)}
+          className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 text-zinc-200 lg:hidden"
+          aria-label="Toggle menu"
+        >
+          {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
+      </nav>
+
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="overflow-hidden border-t border-white/5 lg:hidden"
+          >
+            <div className="space-y-1 bg-ink-900/95 px-4 py-4 backdrop-blur-xl">
+              {NAV.map((item) => (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  end={item.to === '/'}
+                  className={({ isActive }) =>
+                    `block rounded-lg px-4 py-2.5 text-sm font-medium ${
+                      isActive ? 'bg-brand-500/15 text-white' : 'text-zinc-400'
+                    }`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              ))}
+              <div className="flex gap-3 pt-2">
+                <button
+                  onClick={() => openCta()}
+                  className="flex-1 rounded-xl border border-brand-500/40 px-4 py-2.5 text-sm font-semibold text-brand-300"
+                >
+                  Get a Quote
+                </button>
+                <a
+                  href={CALENDLY.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex-1 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-2.5 text-center text-sm font-semibold text-white"
+                >
+                  Book a Call
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
+  )
+}

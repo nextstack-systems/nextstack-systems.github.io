@@ -1,0 +1,139 @@
+import { useState } from 'react'
+import { CheckCircle2, Loader2, Send, ArrowUpRight } from 'lucide-react'
+import { SERVICES, WHATSAPP, submitToHubSpot } from '../lib/config'
+
+export const contactInputCls =
+  'w-full rounded-xl border border-white/10 bg-ink-850/80 px-4 py-3 text-sm text-white placeholder-zinc-500 outline-none transition-all duration-200 focus:border-brand-400 focus:ring-2 focus:ring-brand-500/30'
+
+export function ContactForm({ defaultService = '', compact = false }) {
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    service: defaultService,
+    message: '',
+    resourceUrl: '',
+  })
+  const [status, setStatus] = useState('idle')
+
+  const update = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }))
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setStatus('sending')
+    const result = await submitToHubSpot({
+      name: form.name,
+      email: form.email,
+      phone: form.phone,
+      service_they_want: form.service,
+      message: form.message,
+      resource_url: form.resourceUrl,
+    })
+    setStatus(result.ok ? 'success' : 'error')
+  }
+
+  if (status === 'success') {
+    return (
+      <div className="flex h-full min-h-[24rem] flex-col items-center justify-center rounded-3xl border border-emerald-500/20 bg-emerald-500/5 p-10 text-center">
+        <div className="grid h-16 w-16 place-items-center rounded-2xl bg-emerald-500/15 text-emerald-400">
+          <CheckCircle2 className="h-8 w-8" />
+        </div>
+        <h3 className="mt-6 text-2xl font-bold text-white">Message sent!</h3>
+        <p className="mt-2 max-w-sm text-sm leading-relaxed text-zinc-400">
+          Thanks {form.name.split(' ')[0] || 'there'} — I'll reply within 24 hours. For urgent
+          matters, ping me on WhatsApp.
+        </p>
+        <a
+          href={WHATSAPP.url}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[#25d366]/15 px-5 py-2.5 text-sm font-semibold text-[#4ade80] transition-colors hover:bg-[#25d366]/25"
+        >
+          Chat on WhatsApp <ArrowUpRight className="h-4 w-4" />
+        </a>
+      </div>
+    )
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className={compact ? 'space-y-4' : 'space-y-5'}>
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label className="mb-1.5 block text-xs font-semibold text-zinc-300">Full name *</label>
+          <input required value={form.name} onChange={update('name')} placeholder="Jane Doe" className={contactInputCls} />
+        </div>
+        <div>
+          <label className="mb-1.5 block text-xs font-semibold text-zinc-300">Email *</label>
+          <input required type="email" value={form.email} onChange={update('email')} placeholder="jane@company.com" className={contactInputCls} />
+        </div>
+      </div>
+
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label className="mb-1.5 block text-xs font-semibold text-zinc-300">Phone / WhatsApp *</label>
+          <input required type="tel" value={form.phone} onChange={update('phone')} placeholder="+91 98765 43210" className={contactInputCls} />
+        </div>
+        <div>
+          <label className="mb-1.5 block text-xs font-semibold text-zinc-300">Service you want *</label>
+          <select
+            required
+            value={form.service}
+            onChange={update('service')}
+            className={`${contactInputCls} appearance-none ${form.service ? 'text-white' : 'text-zinc-500'}`}
+          >
+            <option value="" disabled className="bg-ink-900">Select a service</option>
+            {SERVICES.map((s) => (
+              <option key={s.slug} value={s.name} className="bg-ink-900">{s.name}</option>
+            ))}
+            <option value="Other / Not sure yet" className="bg-ink-900">Other / Not sure yet</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label className="mb-1.5 block text-xs font-semibold text-zinc-300">
+          Tell me about your project *
+        </label>
+        <textarea
+          required
+          rows={compact ? 3 : 5}
+          value={form.message}
+          onChange={update('message')}
+          placeholder="Your goals, timeline, budget range, existing brand…"
+          className={`${contactInputCls} resize-none`}
+        />
+      </div>
+
+      <div>
+        <label className="mb-1.5 block text-xs font-semibold text-zinc-300">
+          Resource URL{' '}
+          <span className="font-normal text-zinc-500">(Google Drive, optional)</span>
+        </label>
+        <input value={form.resourceUrl} onChange={update('resourceUrl')} placeholder="https://drive.google.com/…" className={contactInputCls} />
+      </div>
+
+      {status === 'error' && (
+        <p className="rounded-lg bg-red-500/10 px-3 py-2 text-xs text-red-400">
+          Something went wrong sending your message. Please try again or reach out on WhatsApp.
+        </p>
+      )}
+
+      <button
+        type="submit"
+        disabled={status === 'sending'}
+        className="group flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-5 py-3.5 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:shadow-glow-cyan hover:brightness-110 disabled:opacity-60"
+      >
+        {status === 'sending' ? (
+          <>
+            <Loader2 className="h-4 w-4 animate-spin" /> Sending…
+          </>
+        ) : (
+          <>
+            <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            Send Message
+          </>
+        )}
+      </button>
+    </form>
+  )
+}
