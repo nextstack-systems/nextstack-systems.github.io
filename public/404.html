@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting…</title>
+    <script>
+      // Single-page app fallback for GitHub Pages.
+      // Unknown paths (e.g. /services) are served this page; forward the
+      // original path to the root so index.html can restore it and let the
+      // router render the right view.
+      (function () {
+        var target = window.location.pathname + window.location.search + window.location.hash;
+        window.location.replace('/?redirect=' + encodeURIComponent(target));
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

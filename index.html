@@ -10,6 +10,15 @@
     />
     <meta name="theme-color" content="#05060b" />
     <title>Abhishek Sharma — Full Stack Developer & AI Automation Expert</title>
+    <script>
+      // Restore the original path after the 404.html SPA fallback redirect.
+      (function () {
+        var m = window.location.search.match(/[?&]redirect=([^&]+)/);
+        if (m && m[1]) {
+          window.history.replaceState({}, '', decodeURIComponent(m[1]));
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
