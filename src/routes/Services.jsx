@@ -1,5 +1,7 @@
+'use client'
+
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowRight, Info, BadgeCheck, Wallet, RefreshCw, Headset } from 'lucide-react'
 import { SERVICES, PRICE_NOTE, INDUSTRIES } from '../lib/config'
@@ -182,7 +184,7 @@ export function Services() {
               ))}
             </div>
             <Link
-              to="/about"
+              href="/about"
               className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-brand-300 transition-colors hover:text-brand-200"
             >
               Learn more about my approach <ArrowRight className="h-4 w-4" />

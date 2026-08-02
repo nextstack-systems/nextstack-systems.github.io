@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from 'framer-motion'
 import { ArrowUpRight, CalendarCheck, MessageCircle } from 'lucide-react'
 import { CALENDLY, WHATSAPP } from '../lib/config'

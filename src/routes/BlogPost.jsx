@@ -1,4 +1,7 @@
-import { Link, useParams } from 'react-router-dom'
+'use client'
+
+import Link from 'next/link'
+import { useParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { ArrowLeft, ArrowRight, Clock } from 'lucide-react'
 import { BLOG_POSTS } from '../lib/config'
@@ -18,7 +21,7 @@ export function BlogPost() {
         <h1 className="text-3xl font-bold">Article not found</h1>
         <p className="mt-3 text-zinc-400">The article you're looking for doesn't exist.</p>
         <Link
-          to="/blog"
+          href="/blog"
           className="mt-8 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-6 py-3 text-sm font-semibold text-white"
         >
           <ArrowLeft className="h-4 w-4" /> Back to blog
@@ -39,7 +42,7 @@ export function BlogPost() {
           transition={{ duration: 0.6 }}
         >
           <Link
-            to="/blog"
+            href="/blog"
             className="inline-flex items-center gap-2 text-sm font-medium text-zinc-400 transition-colors hover:text-white"
           >
             <ArrowLeft className="h-4 w-4" /> All articles
@@ -120,7 +123,7 @@ export function BlogPost() {
             {related.map((p) => (
               <Link
                 key={p.slug}
-                to={`/blog/${p.slug}`}
+                href={`/blog/${p.slug}`}
                 className="group overflow-hidden rounded-3xl border border-white/8 bg-ink-900/70 transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-500/30"
               >
                 <div className="relative h-36 overflow-hidden">

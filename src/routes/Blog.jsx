@@ -1,5 +1,7 @@
+'use client'
+
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight, Clock, Search } from 'lucide-react'
 import { BLOG_POSTS } from '../lib/config'
@@ -47,7 +49,7 @@ export function Blog() {
       <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
         <Reveal>
           <Link
-            to={`/blog/${featured.slug}`}
+            href={`/blog/${featured.slug}`}
             className="group grid overflow-hidden rounded-[2rem] border border-white/10 bg-ink-900/70 transition-colors duration-300 hover:border-brand-500/30 lg:grid-cols-2"
           >
             <div className="relative h-64 lg:h-auto">
@@ -133,7 +135,7 @@ export function Blog() {
                     transition={{ duration: 0.4, delay: i * 0.04 }}
                   >
                     <Link
-                      to={`/blog/${post.slug}`}
+                      href={`/blog/${post.slug}`}
                       className="group flex h-full flex-col overflow-hidden rounded-3xl border border-white/8 bg-ink-900/70 transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-500/30"
                     >
                       <div className="relative h-44 overflow-hidden">

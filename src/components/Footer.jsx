@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom'
+'use client'
+
+import Link from 'next/link'
 import { Mail, MapPin, MessageCircle, ArrowUpRight } from 'lucide-react'
 import { Logo } from './Logo'
 import { SITE, WHATSAPP, CALENDLY, SERVICES } from '../lib/config'
@@ -54,7 +56,7 @@ export function Footer() {
               ].map((l) => (
                 <li key={l.to}>
                   <Link
-                    to={l.to}
+                    href={l.to}
                     className="transition-colors duration-200 hover:text-brand-300"
                   >
                     {l.label}
@@ -72,7 +74,7 @@ export function Footer() {
               {SERVICES.map((s) => (
                 <li key={s.slug}>
                   <Link
-                    to={`/services#${s.slug}`}
+                    href={`/services#${s.slug}`}
                     className="transition-colors duration-200 hover:text-brand-300"
                   >
                     {s.name}

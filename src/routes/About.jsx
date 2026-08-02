@@ -1,3 +1,5 @@
+'use client'
+
 import { Sparkles, Target, ShieldCheck, HeartHandshake, Award, Code2, Wrench, Rocket } from 'lucide-react'
 import { SITE } from '../lib/config'
 import { PageHero } from '../components/PageHero'

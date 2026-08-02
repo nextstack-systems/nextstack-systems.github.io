@@ -1,16 +1,55 @@
-# React + Vite
+# Abhishek Sharma — Freelance Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A statically-generated Next.js site built for speed and SEO. Every route is prerendered to static HTML and ships as a pure static export.
 
-Currently, two official plugins are available:
+## Tech stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- [Next.js](https://nextjs.org/) (App Router) — static site generation + `output: "export"`
+- React 19
+- Tailwind CSS v4
+- framer-motion — scroll reveals, hover micro-interactions
+- lucide-react — icons
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the Oxlint configuration
+Open http://localhost:3000 to view the dev server.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Commands
+
+```bash
+npm run dev       # start the Next.js dev server
+npm run build     # build the static export into the out/ directory
+npm run lint      # run oxlint
+npm run preview   # build then serve out/ locally
+```
+
+## Static export
+
+The site uses `output: "export"` with `trailingSlash: true`, so `next build` generates a fully static `out/` folder (one `index.html` per route) that can be hosted anywhere — GitHub Pages, Netlify, Vercel, etc.
+
+The included GitHub Actions workflow (`/.github/workflows/deploy.yml`) builds and deploys `out/` to GitHub Pages on every push to `main`.
+
+## Structure
+
+```
+app/                    # Next.js App Router routes + per-page SEO metadata
+  layout.jsx            # root layout: fonts, providers, navbar, footer
+  page.jsx              # home
+  services/  process/  mentorship/  blog/  about/
+  blog/[slug]/          # blog post pages (generateStaticParams)
+  not-found.jsx         # custom 404
+src/
+  routes/               # page components (client)
+  components/           # shared components
+  lib/                  # config, blog content, CTA context
+public/                 # static assets (favicon, etc.)
+```
+
+## Configuration
+
+Replace the placeholder credentials in `src/lib/config.js` (HubSpot portal/form IDs, WhatsApp number, Calendly URL) before going live.

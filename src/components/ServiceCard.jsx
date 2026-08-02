@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom'
+'use client'
+
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Check, ArrowUpRight, Sparkles } from 'lucide-react'
 import { ServiceIcon } from './icons'
@@ -69,7 +71,7 @@ export function ServiceCard({ service, compact = false }) {
           Start this project
         </button>
         <Link
-          to={`/services#${service.slug}`}
+          href={`/services#${service.slug}`}
           className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 text-zinc-400 transition-all duration-300 hover:border-brand-400 hover:text-white"
           aria-label={`View ${service.name} details`}
         >

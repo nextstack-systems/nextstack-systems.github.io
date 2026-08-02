@@ -1,5 +1,7 @@
+'use client'
+
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import {
   ArrowRight,
   CalendarCheck,
@@ -289,7 +291,7 @@ function ServicesPreview() {
 
       <Reveal className="mt-12 text-center">
         <Link
-          to="/services"
+          href="/services"
           className="group inline-flex items-center gap-2 text-sm font-semibold text-brand-300 transition-colors hover:text-brand-200"
         >
           View all services & pricing
@@ -379,7 +381,7 @@ function ProcessPreview() {
 
       <Reveal className="mt-12 text-center">
         <Link
-          to="/process"
+          href="/process"
           className="group inline-flex items-center gap-2 text-sm font-semibold text-brand-300 transition-colors hover:text-brand-200"
         >
           See the full process

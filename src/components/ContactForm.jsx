@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react'
 import { CheckCircle2, Loader2, Send, ArrowUpRight } from 'lucide-react'
 import { SERVICES, WHATSAPP, submitToHubSpot } from '../lib/config'

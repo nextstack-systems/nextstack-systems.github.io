@@ -1,5 +1,8 @@
+'use client'
+
 import { useEffect, useState } from 'react'
-import { NavLink, useLocation } from 'react-router-dom'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, CalendarCheck } from 'lucide-react'
 import { Logo } from './Logo'
@@ -15,10 +18,23 @@ const NAV = [
   { to: '/about', label: 'About' },
 ]
 
+function NavLink({ to, end, className, children }) {
+  const pathname = usePathname()
+  const isActive = end ? pathname === to : pathname === to || pathname.startsWith(to)
+  return (
+    <Link
+      href={to}
+      className={typeof className === 'function' ? className({ isActive }) : className}
+    >
+      {typeof children === 'function' ? children({ isActive }) : children}
+    </Link>
+  )
+}
+
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const location = useLocation()
+  const pathname = usePathname()
   const { openCta } = useCta()
 
   useEffect(() => {
@@ -30,7 +46,7 @@ export function Navbar() {
 
   useEffect(() => {
     setMobileOpen(false)
-  }, [location.pathname])
+  }, [pathname])
 
   return (
     <motion.header

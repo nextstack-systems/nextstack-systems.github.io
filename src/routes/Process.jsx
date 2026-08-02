@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from 'framer-motion'
 import { Check, Clock, MessageSquareText, FileText, Users } from 'lucide-react'
 import { PROCESS_STEPS } from '../lib/config'
