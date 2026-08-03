@@ -51,7 +51,7 @@ const VALUES = [
   {
     icon: Award,
     title: 'Craft, every time',
-    desc: 'Speed, accessibility and polish are non-negotiables — whether it\u2019s a ₹10k site or a ₹1L automation build.',
+    desc: 'Speed, accessibility and polish are non-negotiables whether it\u2019s a ₹10k site or a ₹1L automation build.',
   },
 ]
 
@@ -59,7 +59,7 @@ const TIMELINE = [
   {
     year: '2021',
     title: 'Started freelancing',
-    desc: 'Built my first websites for local cafés and clinics — and learned the hard way what business owners actually care about.',
+    desc: 'Built my first websites for local cafés and clinics and learned the hard way what business owners actually care about.',
   },
   {
     year: '2022',
@@ -74,7 +74,7 @@ const TIMELINE = [
   {
     year: '2024',
     title: 'Built the WhatsApp CRM practice',
-    desc: 'Started hosting and integrating WhatsApp CRMs for clients — shared inboxes, pipelines and AI replies on their own subdomains.',
+    desc: 'Started hosting and integrating WhatsApp CRMs for clients shared inboxes, pipelines and AI replies on their own subdomains.',
   },
   {
     year: '2025',
@@ -84,7 +84,7 @@ const TIMELINE = [
   {
     year: '2026',
     title: 'Today',
-    desc: 'Running a full-service practice: websites, stores, CRMs, funnels and AI systems for clients in 20+ industries — plus mentoring the next wave of builders.',
+    desc: 'Running a full service practice: websites, stores, CRMs, funnels and AI systems for clients in 20+ industries mentoring the next wave of builders.',
   },
 ]
 
@@ -95,7 +95,7 @@ export function About() {
         eyebrow="About me"
         title={
           <>
-            I'm {SITE.name} — and I build systems that{' '}
+            I'm {SITE.name} - and I build systems that{' '}
             <span className="text-gradient">actually get used</span>
           </>
         }
@@ -111,7 +111,7 @@ export function About() {
             </h2>
             <div className="mt-6 space-y-4 leading-relaxed text-zinc-400">
               <p>
-                I'm {SITE.name} — a {SITE.experienceYears}+ year full stack web developer who builds
+                I'm {SITE.name} - a {SITE.experienceYears}+ year full stack web developer who builds
                 websites and AI systems that businesses actually use. My clients span small
                 businesses, professionals and growing enterprises, across {SITE.industriesServed}+
                 industries.
@@ -119,11 +119,11 @@ export function About() {
               <p>
                 What makes my work different is the focus on outcomes: a café wants reservations, a
                 clinic wants bookings, a startup wants investor leads. I design and build with that
-                end in mind, then keep the systems running after launch — hosting, domain, email,
+                end in mind, then keep the systems running after launch-hosting, domain, email,
                 CRMs and automation included.
               </p>
               <p>
-                I believe most businesses don't need a bigger ad budget — they need a better pipeline.
+                I believe most businesses don't need a bigger ad budget they need a better pipeline.
                 That's why every project I ship comes with lead capture, real-time chat and
                 integrations (HubSpot, WhatsApp, Omnisend) built in, not bolted on.
               </p>

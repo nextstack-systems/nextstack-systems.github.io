@@ -34,11 +34,11 @@ const EXPECTATIONS = [
 const FAQS = [
   {
     q: 'How long does a typical project take?',
-    a: 'A business website usually ships in 2–4 weeks. Online stores take 3–6 weeks. Automation and CRM projects vary with scope — I give you a timeline in the proposal and we track against it.',
+    a: 'A business website usually ships in 2–4 weeks. Online stores take 3–6 weeks. Automation and CRM projects vary with scope-I give you a timeline in the proposal and we track against it.',
   },
   {
     q: 'What do I need to provide before we start?',
-    a: 'Your logo, brand colours and text content (I help with the text if you need it). Anything else — photos, menus, product details — we agree on a list during the discovery call.',
+    a: 'Your logo, brand colours and text content (I help with the text if you need it). Anything else-photos, menus, product details-we agree on a list during the discovery call.',
   },
   {
     q: 'Do you work with existing designs or websites?',
@@ -54,7 +54,7 @@ const FAQS = [
   },
   {
     q: 'Can you integrate HubSpot, WhatsApp or other tools?',
-    a: 'Yes — HubSpot forms and chat, WhatsApp CRM, Omnisend, payment gateways and n8n automation are core parts of most projects. Tell me which tools you use and I\u2019ll wire them in.',
+    a: 'Yes-HubSpot forms and chat, WhatsApp CRM, Omnisend, payment gateways and n8n automation are core parts of most projects. Tell me which tools you use and I\u2019ll wire them in.',
   },
 ]
 
@@ -80,7 +80,7 @@ export function Process() {
             <span className="text-gradient">first call to launch</span>
           </>
         }
-        description="Five clear phases. You'll always know what's happening, what's next and what it costs — no black box, no surprises."
+        description="Five clear phases. You'll always know what's happening, what's next and what it costs-no black box, no surprises."
       />
 
       <section className="mx-auto max-w-5xl px-4 pb-24 sm:px-6 lg:px-8">

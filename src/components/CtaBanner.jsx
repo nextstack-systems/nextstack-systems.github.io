@@ -32,7 +32,7 @@ export function CtaBanner() {
               <span className="text-gradient">your business actually uses?</span>
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg">
-              Get a fixed-price quote within 24 hours. No pressure, no jargon — just a clear plan
+              Get a fixed-price quote within 24 hours. No pressure, no jargon-just a clear plan
               for your project.
             </p>
 

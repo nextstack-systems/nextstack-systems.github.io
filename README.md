@@ -1,14 +1,14 @@
-# Abhishek Sharma — Freelance Portfolio
+# Abhishek Sharma-Freelance Portfolio
 
 A statically-generated Next.js site built for speed and SEO. Every route is prerendered to static HTML and ships as a pure static export.
 
 ## Tech stack
 
-- [Next.js](https://nextjs.org/) (App Router) — static site generation + `output: "export"`
+- [Next.js](https://nextjs.org/) (App Router)-static site generation + `output: "export"`
 - React 19
 - Tailwind CSS v4
-- framer-motion — scroll reveals, hover micro-interactions
-- lucide-react — icons
+- framer-motion-scroll reveals, hover micro-interactions
+- lucide-react-icons
 
 ## Getting started
 
@@ -30,7 +30,7 @@ npm run preview   # build then serve out/ locally
 
 ## Static export
 
-The site uses `output: "export"` with `trailingSlash: true`, so `next build` generates a fully static `out/` folder (one `index.html` per route) that can be hosted anywhere — GitHub Pages, Netlify, Vercel, etc.
+The site uses `output: "export"` with `trailingSlash: true`, so `next build` generates a fully static `out/` folder (one `index.html` per route) that can be hosted anywhere-GitHub Pages, Netlify, Vercel, etc.
 
 The included GitHub Actions workflow (`/.github/workflows/deploy.yml`) builds and deploys `out/` to GitHub Pages on every push to `main`.
 

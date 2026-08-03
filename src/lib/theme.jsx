@@ -16,7 +16,7 @@ export function ThemeProvider({ children }) {
     try {
       localStorage.setItem('theme', theme)
     } catch {
-      // storage unavailable (private mode) — theme still applies for the session
+      // storage unavailable (private mode)-theme still applies for the session
     }
     const meta = document.querySelector('meta[name="theme-color"]')
     if (meta) meta.setAttribute('content', theme === 'dark' ? '#05060b' : '#f4f5f9')

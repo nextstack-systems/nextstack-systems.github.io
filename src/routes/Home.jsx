@@ -185,7 +185,7 @@ function Hero() {
             transition={{ duration: 0.7, delay: 0.25 }}
             className="mt-6 max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg"
           >
-            From the first conversation to full deployment — websites, online stores, WhatsApp
+            From the first conversation to full deployment-websites, online stores, WhatsApp
             CRMs, marketing funnels and AI automation for{' '}
             <span className="font-medium text-zinc-200">small businesses, professionals and growing enterprises</span>.
           </motion.p>
@@ -316,7 +316,7 @@ function Industries() {
               Built for <span className="text-gradient">businesses like yours</span>
             </>
           }
-          description="I've delivered for clients across small businesses, professionals and growing enterprises — each with its own playbook."
+          description="I've delivered for clients across small businesses, professionals and growing enterprises-each with its own playbook."
         />
 
         <Stagger className="mt-14 grid gap-6 lg:grid-cols-3" stagger={0.1}>
@@ -366,7 +366,7 @@ function ProcessPreview() {
         {PROCESS_STEPS.slice(0, 4).map((p) => (
           <StaggerItem key={p.step} className="h-full">
             <div className="group relative h-full overflow-hidden rounded-3xl border border-white/8 bg-ink-900/70 p-6 transition-all duration-300 hover:border-brand-500/30">
-              <span className="font-display text-5xl font-bold text-white/5 transition-colors duration-300 group-hover:text-brand-500/15">
+              <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-accent-500 font-display text-base font-bold text-on-brand shadow-glow">
                 {p.step}
               </span>
               <h3 className="mt-4 font-display text-lg font-bold text-white">{p.title}</h3>
@@ -397,7 +397,7 @@ function WhyMe() {
     {
       icon: ShieldCheck,
       title: 'Built to convert',
-      desc: 'Every section earns its place — designed to turn visitors into enquiries, not just look pretty.',
+      desc: 'Every section earns its place-designed to turn visitors into enquiries, not just look pretty.',
     },
     {
       icon: Zap,
@@ -407,7 +407,7 @@ function WhyMe() {
     {
       icon: Search,
       title: 'SEO baked in',
-      desc: 'Technical SEO, schema and optimisation handled from day one — not bolted on later.',
+      desc: 'Technical SEO, schema and optimisation handled from day one-not bolted on later.',
     },
     {
       icon: Rocket,
@@ -425,13 +425,13 @@ function WhyMe() {
             Why work with me
           </span>
           <h2 className="mt-5 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
-            One person, <span className="text-gradient">end-to-end ownership</span> — from brief
+            One person, <span className="text-gradient">end-to-end ownership</span> - from brief
             to deployment
           </h2>
           <p className="mt-5 text-base leading-relaxed text-zinc-400">
             I've spent {SITE.experienceYears}+ years shipping websites and AI systems for{' '}
             {SITE.industriesServed}+ industries. You work directly with the person who builds,
-            launches and supports your project — no agencies, no hand-offs, no vanishing act.
+            launches and supports your project-no agencies, no hand-offs, no vanishing act.
           </p>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2">

@@ -11,7 +11,7 @@ export async function generateMetadata({ params }) {
   const post = BLOG_POSTS.find((p) => p.slug === slug)
   const content = BLOG_CONTENT[slug]
   return {
-    title: post ? `${post.title} — Abhishek Sharma` : 'Blog — Abhishek Sharma',
+    title: post ? `${post.title}-Abhishek Sharma` : 'Blog-Abhishek Sharma',
     description: content?.intro || post?.excerpt || '',
   }
 }

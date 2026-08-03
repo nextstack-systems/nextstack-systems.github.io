@@ -42,7 +42,7 @@ export function ContactForm({ defaultService = '', compact = false }) {
         </div>
         <h3 className="mt-6 text-2xl font-bold text-white">Message sent!</h3>
         <p className="mt-2 max-w-sm text-sm leading-relaxed text-zinc-400">
-          Thanks {form.name.split(' ')[0] || 'there'} — I'll reply within 24 hours. For urgent
+          Thanks {form.name.split(' ')[0] || 'there'}-I'll reply within 24 hours. For urgent
           matters, ping me on WhatsApp.
         </p>
         <a

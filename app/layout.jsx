@@ -10,9 +10,9 @@ import '../src/index.css'
 
 export const metadata = {
   metadataBase: new URL('https://abhisheksharma.dev'),
-  title: 'Abhishek Sharma — Full Stack Developer & AI Automation Expert',
+  title: 'Abhishek Sharma-Full Stack Developer & AI Automation Expert',
   description:
-    'Abhishek Sharma — Full Stack Developer & AI Automation Expert. I build websites and AI systems that businesses actually use, from first conversation to full deployment.',
+    'Abhishek Sharma-Full Stack Developer & AI Automation Expert. I build websites and AI systems that businesses actually use, from first conversation to full deployment.',
   keywords: [
     'Abhishek Sharma',
     'Full Stack Developer',
@@ -29,7 +29,7 @@ export const metadata = {
   },
   openGraph: {
     type: 'website',
-    title: 'Abhishek Sharma — Full Stack Developer & AI Automation Expert',
+    title: 'Abhishek Sharma-Full Stack Developer & AI Automation Expert',
     description:
       'I build websites and AI systems that businesses actually use, from first conversation to full deployment.',
     siteName: 'Abhishek Sharma',

@@ -25,7 +25,7 @@ const GUARANTEES = [
   {
     icon: BadgeCheck,
     title: 'Deliverables, in writing',
-    desc: 'A clear list of what you get — hosting, domain, email, integrations — before you pay.',
+    desc: 'A clear list of what you get-hosting, domain, email, integrations-before you pay.',
   },
   {
     icon: Headset,
@@ -58,7 +58,7 @@ export function Services() {
             Services with <span className="text-gradient">honest, fixed pricing</span>
           </>
         }
-        description="Six ways I help businesses win online — websites, stores, WhatsApp CRMs, marketing automation, funnels and AI workflows. All prices are starting prices."
+        description="Six ways I help businesses win online-websites, stores, WhatsApp CRMs, marketing automation, funnels and AI workflows. All prices are starting prices."
       >
         <div className="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-ink-900/70 px-5 py-3 text-sm text-zinc-300">
           <Info className="h-4 w-4 text-accent-400" />
@@ -83,7 +83,7 @@ export function Services() {
               How to <span className="text-gradient">choose</span>?
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-zinc-400 sm:text-base">
-              Not sure which stack fits? Here's the honest version — most businesses combine one
+              Not sure which stack fits? Here's the honest version-most businesses combine one
               core service with a WhatsApp CRM or automation to close the loop between marketing and
               revenue.
             </p>
@@ -93,13 +93,13 @@ export function Services() {
             {[
               {
                 title: 'Just need a presence?',
-                desc: 'Start with a Business Website — look professional, rank on Google, capture leads.',
+                desc: 'Start with a Business Website-look professional, rank on Google, capture leads.',
                 cta: 'Business Website',
                 slug: 'business-website',
               },
               {
                 title: 'Selling products?',
-                desc: 'Add the Online Store — product listings, orders and deals synced to your CRM.',
+                desc: 'Add the Online Store-product listings, orders and deals synced to your CRM.',
                 cta: 'Online Store',
                 slug: 'online-store',
               },
@@ -169,7 +169,7 @@ export function Services() {
               Not sure which <span className="text-gradient">industry playbook</span> applies?
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-zinc-400 sm:text-base">
-              Every industry gets a tailored approach — explore who I work with, then let's map your
+              Every industry gets a tailored approach-explore who I work with, then let's map your
               exact needs.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">

@@ -43,7 +43,7 @@ export function Blog() {
             Ideas for building & <span className="text-gradient">growing online</span>
           </>
         }
-        description="Practical, no-fluff writing on websites, AI automation, marketing funnels and SEO — the stuff I use with clients every week."
+        description="Practical, no-fluff writing on websites, AI automation, marketing funnels and SEO-the stuff I use with clients every week."
       />
 
       <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">

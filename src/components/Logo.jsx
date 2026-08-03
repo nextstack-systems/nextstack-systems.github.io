@@ -8,7 +8,7 @@ export function Logo({ className = '' }) {
         <span className="absolute inset-0 rounded-xl bg-white/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       </span>
       <span className="font-display text-lg font-bold tracking-tight text-white">
-        Abhishek<span className="text-brand-400">.dev</span>
+        Abhishek<span className="text-brand-400"> Sharma</span>
       </span>
     </Link>
   )

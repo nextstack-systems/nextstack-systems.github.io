@@ -11,7 +11,7 @@ export function FloatingActions() {
   const [showTooltip, setShowTooltip] = useState(false)
 
   return (
-    <div className="fixed bottom-5 right-5 z-[70] flex flex-col items-end gap-3">
+    <div className="fixed bottom-25 right-5 z-[70] flex flex-col items-end gap-8">
       <AnimatePresence>
         {showTooltip && (
           <motion.div
@@ -20,7 +20,7 @@ export function FloatingActions() {
             exit={{ opacity: 0, y: 8, scale: 0.95 }}
             className="mb-1 rounded-2xl rounded-br-md border border-white/10 bg-ink-850/95 px-4 py-2.5 text-sm text-zinc-300 shadow-xl backdrop-blur-xl"
           >
-            Get a free project estimate — usually under 24h.
+            Get a free project estimate-usually under 24h.
           </motion.div>
         )}
       </AnimatePresence>
@@ -43,7 +43,7 @@ export function FloatingActions() {
         target="_blank"
         rel="noreferrer"
         aria-label="Chat on WhatsApp"
-        className="group relative grid h-14 w-14 place-items-center rounded-full bg-wa text-on-brand shadow-[0_8px_30px_-6px_rgba(37,211,102,0.6)] transition-transform duration-300 hover:scale-110"
+        className="group relative grid h-14 w-14 place-items-center rounded-full bg-wa text-on-brand shadow-[0_8px_20px_-6px_rgba(37,211,102,0.6)] transition-transform duration-300 hover:scale-110"
       >
         <span className="absolute inset-0 animate-ping rounded-full bg-wa/40" />
         <MessageCircle className="relative h-6 w-6 transition-transform duration-300 group-hover:rotate-12" />

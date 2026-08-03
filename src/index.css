@@ -46,7 +46,7 @@
   color-scheme: dark;
 }
 
-/* Light theme overrides — applied whenever <html> does not carry the .dark class */
+/* Light theme overrides-applied whenever <html> does not carry the .dark class */
 :root:not(.dark) {
   --color-ink-950: #f4f5f9;
   --color-ink-900: #ffffff;
