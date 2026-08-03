@@ -29,7 +29,7 @@ export function FloatingActions() {
         onClick={() => openCta()}
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
-        className="group relative inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-3 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:scale-[1.03] hover:shadow-glow-cyan"
+        className="group relative inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-3 text-sm font-semibold text-on-brand shadow-glow transition-all duration-300 hover:scale-[1.03] hover:shadow-glow-cyan"
       >
         <span className="absolute -right-1 -top-1 grid h-4 w-4 place-items-center">
           <span className="absolute h-4 w-4 animate-ping rounded-full bg-accent-400/60" />
@@ -43,7 +43,7 @@ export function FloatingActions() {
         target="_blank"
         rel="noreferrer"
         aria-label="Chat on WhatsApp"
-        className="group relative grid h-14 w-14 place-items-center rounded-full bg-wa text-white shadow-[0_8px_30px_-6px_rgba(37,211,102,0.6)] transition-transform duration-300 hover:scale-110"
+        className="group relative grid h-14 w-14 place-items-center rounded-full bg-wa text-on-brand shadow-[0_8px_30px_-6px_rgba(37,211,102,0.6)] transition-transform duration-300 hover:scale-110"
       >
         <span className="absolute inset-0 animate-ping rounded-full bg-wa/40" />
         <MessageCircle className="relative h-6 w-6 transition-transform duration-300 group-hover:rotate-12" />

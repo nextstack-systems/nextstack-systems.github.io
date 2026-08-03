@@ -54,7 +54,7 @@ export function Blog() {
           >
             <div className="relative h-64 lg:h-auto">
               <CoverVisual cover={featured.cover} className="h-full w-full" />
-              <span className="absolute left-5 top-5 rounded-full bg-gradient-to-r from-brand-600 to-brand-500 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-wider text-white">
+              <span className="absolute left-5 top-5 rounded-full bg-gradient-to-r from-brand-600 to-brand-500 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-wider text-on-brand">
                 Featured
               </span>
             </div>
@@ -92,7 +92,7 @@ export function Blog() {
                 onClick={() => setActive(cat)}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ${
                   active === cat
-                    ? 'bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-glow'
+                    ? 'bg-gradient-to-r from-brand-600 to-brand-500 text-on-brand shadow-glow'
                     : 'border border-white/10 text-zinc-400 hover:border-brand-500/40 hover:text-white'
                 }`}
               >
@@ -140,7 +140,7 @@ export function Blog() {
                     >
                       <div className="relative h-44 overflow-hidden">
                         <CoverVisual cover={post.cover} className="h-full w-full" />
-                        <span className="absolute left-4 top-4 rounded-full border border-white/10 bg-black/40 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-zinc-200 backdrop-blur">
+                        <span className="absolute left-4 top-4 rounded-full border border-white/10 bg-white/60 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-zinc-800 backdrop-blur dark:border-white/10 dark:bg-black/40 dark:text-zinc-200">
                           {post.category}
                         </span>
                       </div>

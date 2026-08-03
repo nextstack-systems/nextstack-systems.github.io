@@ -22,7 +22,7 @@ export function BlogPost() {
         <p className="mt-3 text-zinc-400">The article you're looking for doesn't exist.</p>
         <Link
           href="/blog"
-          className="mt-8 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-6 py-3 text-sm font-semibold text-white"
+          className="mt-8 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-6 py-3 text-sm font-semibold text-on-brand"
         >
           <ArrowLeft className="h-4 w-4" /> Back to blog
         </Link>
@@ -65,7 +65,7 @@ export function BlogPost() {
           <p className="mt-5 text-lg leading-relaxed text-zinc-400">{content.intro}</p>
 
           <div className="mt-8 flex items-center gap-3 border-y border-white/5 py-4">
-            <span className="grid h-11 w-11 place-items-center rounded-full bg-gradient-to-br from-brand-500 to-accent-500 font-display text-sm font-bold text-white">
+            <span className="grid h-11 w-11 place-items-center rounded-full bg-gradient-to-br from-brand-500 to-accent-500 font-display text-sm font-bold text-on-brand">
               A
             </span>
             <div>
@@ -108,7 +108,7 @@ export function BlogPost() {
           </p>
           <button
             onClick={() => openCta()}
-            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:scale-[1.03]"
+            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-6 py-3 text-sm font-semibold text-on-brand shadow-glow transition-all duration-300 hover:scale-[1.03]"
           >
             Start a Conversation
             <ArrowRight className="h-4 w-4" />

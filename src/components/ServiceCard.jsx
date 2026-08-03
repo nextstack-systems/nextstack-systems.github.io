@@ -21,7 +21,7 @@ export function ServiceCard({ service, compact = false }) {
       } transition-all duration-300`}
     >
       {service.featured && (
-        <span className="absolute right-5 top-5 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-brand-500 to-accent-500 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
+        <span className="absolute right-5 top-5 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-brand-500 to-accent-500 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-on-brand">
           <Sparkles className="h-3 w-3" /> Most popular
         </span>
       )}
@@ -29,7 +29,7 @@ export function ServiceCard({ service, compact = false }) {
       <div
         className={`grid h-12 w-12 place-items-center rounded-2xl ${
           service.featured
-            ? 'bg-gradient-to-br from-brand-500 to-accent-500 text-white'
+            ? 'bg-gradient-to-br from-brand-500 to-accent-500 text-on-brand'
             : 'bg-brand-500/10 text-brand-300'
         }`}
       >
@@ -64,7 +64,7 @@ export function ServiceCard({ service, compact = false }) {
           onClick={() => openCta(service.name)}
           className={`flex-1 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-300 ${
             service.featured
-              ? 'bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-glow hover:brightness-110'
+              ? 'bg-gradient-to-r from-brand-600 to-brand-500 text-on-brand shadow-glow hover:brightness-110'
               : 'border border-brand-500/40 text-brand-300 hover:bg-brand-500/10'
           }`}
         >

@@ -143,7 +143,7 @@ export function Mentorship() {
             href={CALENDLY.url}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-brand-600 to-brand-500 px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:scale-[1.03] hover:shadow-glow-cyan"
+            className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-brand-600 to-brand-500 px-6 py-3.5 text-sm font-semibold text-on-brand shadow-glow transition-all duration-300 hover:scale-[1.03] hover:shadow-glow-cyan"
           >
             <CalendarCheck className="h-4 w-4" />
             Book a Mentorship Intro Call
@@ -217,7 +217,7 @@ export function Mentorship() {
                       <f.icon className="h-6 w-6" />
                     </span>
                     {i === 1 && (
-                      <span className="rounded-full bg-gradient-to-r from-brand-500 to-accent-500 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
+                      <span className="rounded-full bg-gradient-to-r from-brand-500 to-accent-500 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-on-brand">
                         Most popular
                       </span>
                     )}
@@ -239,7 +239,7 @@ export function Mentorship() {
                     rel="noreferrer"
                     className={`mt-7 rounded-xl px-5 py-3 text-center text-sm font-semibold transition-all duration-300 ${
                       i === 1
-                        ? 'bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow-glow hover:brightness-110'
+                        ? 'bg-gradient-to-r from-brand-600 to-brand-500 text-on-brand shadow-glow hover:brightness-110'
                         : 'border border-brand-500/40 text-brand-300 hover:bg-brand-500/10'
                     }`}
                   >
@@ -267,7 +267,7 @@ export function Mentorship() {
               <div className="h-full rounded-3xl border border-white/8 bg-ink-900/60 p-6">
                 <p className="text-sm leading-relaxed text-zinc-300">"{s.quote}"</p>
                 <div className="mt-5 flex items-center gap-3 border-t border-white/5 pt-4">
-                  <span className="grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-brand-500 to-accent-500 font-display text-sm font-bold text-white">
+                  <span className="grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-brand-500 to-accent-500 font-display text-sm font-bold text-on-brand">
                     {s.name.charAt(0)}
                   </span>
                   <div>

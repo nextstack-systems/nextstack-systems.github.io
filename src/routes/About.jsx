@@ -163,7 +163,7 @@ export function About() {
                 </div>
 
                 <div className="mt-8 flex items-center gap-4">
-                  <span className="grid h-20 w-20 shrink-0 place-items-center rounded-3xl bg-gradient-to-br from-brand-500 to-accent-500 font-display text-3xl font-bold text-white shadow-glow">
+                  <span className="grid h-20 w-20 shrink-0 place-items-center rounded-3xl bg-gradient-to-br from-brand-500 to-accent-500 font-display text-3xl font-bold text-on-brand shadow-glow">
                     A
                   </span>
                   <div>

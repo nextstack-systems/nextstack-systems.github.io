@@ -101,7 +101,7 @@ function HeroCard() {
         transition={{ delay: 0.9, duration: 0.6 }}
         className="glass absolute -left-6 -top-6 hidden items-center gap-2 rounded-2xl px-4 py-3 sm:flex"
       >
-        <span className="grid h-8 w-8 place-items-center rounded-xl bg-[#25d366]/15 text-[#4ade80]">
+        <span className="grid h-8 w-8 place-items-center rounded-xl bg-[#25d366]/15 text-emerald-400">
           <ServiceIcon name="message-circle" className="h-4 w-4" />
         </span>
         <div>
@@ -198,7 +198,7 @@ function Hero() {
           >
             <button
               onClick={() => openCta()}
-              className="group inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-brand-600 to-brand-500 px-7 py-4 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:scale-[1.03] hover:shadow-glow-cyan"
+              className="group inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-brand-600 to-brand-500 px-7 py-4 text-sm font-semibold text-on-brand shadow-glow transition-all duration-300 hover:scale-[1.03] hover:shadow-glow-cyan"
             >
               Start Your Project
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -463,7 +463,7 @@ function WhyMe() {
                     <Quote className="h-5 w-5 text-brand-400" />
                     <p className="mt-3 text-sm leading-relaxed text-zinc-300">{t.quote}</p>
                     <div className="mt-4 flex items-center gap-3">
-                      <span className="grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-brand-500 to-accent-500 font-display text-sm font-bold text-white">
+                      <span className="grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-brand-500 to-accent-500 font-display text-sm font-bold text-on-brand">
                         {t.name.charAt(0)}
                       </span>
                       <div>

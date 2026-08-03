@@ -17,7 +17,7 @@ export function NotFound() {
         </p>
         <Link
           href="/"
-          className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-brand-600 to-brand-500 px-7 py-3.5 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:scale-[1.03]"
+          className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-brand-600 to-brand-500 px-7 py-3.5 text-sm font-semibold text-on-brand shadow-glow transition-all duration-300 hover:scale-[1.03]"
         >
           <ArrowLeft className="h-4 w-4" /> Back to Home
         </Link>

@@ -5,7 +5,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  allowedDevOrigins: ['.monkeycode-ai.live'],
+  allowedDevOrigins: ['*.monkeycode-ai.live', '.monkeycode-ai.live'],
 }
 
 export default nextConfig

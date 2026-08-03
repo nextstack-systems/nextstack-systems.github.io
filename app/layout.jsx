@@ -1,11 +1,11 @@
 import { CtaProvider } from '../src/lib/cta-context'
+import { ThemeProvider } from '../src/lib/theme'
 import { Navbar } from '../src/components/Navbar'
 import { Footer } from '../src/components/Footer'
 import { FloatingActions } from '../src/components/FloatingActions'
 import { CtaModal } from '../src/components/CtaModal'
-import { HubSpotScript } from '../src/components/HubSpotScript'
 import { ScrollToTop } from '../src/components/ScrollToTop'
-import { SITE } from '../src/lib/config'
+import { SITE, HUBSPOT } from '../src/lib/config'
 import '../src/index.css'
 
 export const metadata = {
@@ -45,7 +45,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -53,16 +53,30 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}}catch(e){document.documentElement.classList.add('dark')}})();`,
+          }}
+        />
+        {HUBSPOT.portalId && (
+          <script
+            id="hs-script-loader"
+            async
+            defer
+            src={`//js-${HUBSPOT.region}.hs-scripts.com/${HUBSPOT.portalId}.js`}
+          />
+        )}
       </head>
       <body>
         <CtaProvider>
-          <ScrollToTop />
-          <HubSpotScript />
-          <Navbar />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
-          <FloatingActions />
-          <CtaModal />
+          <ThemeProvider>
+            <ScrollToTop />
+            <Navbar />
+            <main className="min-h-screen">{children}</main>
+            <Footer />
+            <FloatingActions />
+            <CtaModal />
+          </ThemeProvider>
         </CtaProvider>
       </body>
     </html>

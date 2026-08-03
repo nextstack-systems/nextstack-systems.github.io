@@ -39,7 +39,7 @@ export function CtaBanner() {
             <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
               <button
                 onClick={() => openCta()}
-                className="group inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-brand-600 to-brand-500 px-7 py-4 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:scale-[1.03] hover:shadow-glow-cyan"
+                className="group inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-brand-600 to-brand-500 px-7 py-4 text-sm font-semibold text-on-brand shadow-glow transition-all duration-300 hover:scale-[1.03] hover:shadow-glow-cyan"
               >
                 Get a Free Quote
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -57,9 +57,9 @@ export function CtaBanner() {
                 href={WHATSAPP.url}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-2xl border border-white/15 px-7 py-4 text-sm font-semibold text-zinc-200 transition-colors hover:border-[#4ade80]/50 hover:text-white"
+                className="inline-flex items-center gap-2 rounded-2xl border border-white/15 px-7 py-4 text-sm font-semibold text-zinc-200 transition-colors hover:border-emerald-400/50 hover:text-white"
               >
-                <MessageCircle className="h-4 w-4 text-[#4ade80]" />
+                <MessageCircle className="h-4 w-4 text-emerald-400" />
                 WhatsApp
               </a>
             </div>

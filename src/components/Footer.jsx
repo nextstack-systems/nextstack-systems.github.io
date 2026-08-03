@@ -34,7 +34,7 @@ export function Footer() {
                 rel="noreferrer"
                 className="flex items-center gap-2 transition-colors hover:text-white"
               >
-                <MessageCircle className="h-4 w-4 text-[#4ade80]" /> WhatsApp me anytime
+                <MessageCircle className="h-4 w-4 text-emerald-400" /> WhatsApp me anytime
               </a>
               <span className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-accent-400" /> {SITE.location}
@@ -92,7 +92,7 @@ export function Footer() {
             <div className="mt-5 flex flex-col gap-3">
               <button
                 onClick={() => openCta()}
-                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-2.5 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:shadow-glow-cyan hover:brightness-110"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-2.5 text-sm font-semibold text-on-brand shadow-glow transition-all duration-300 hover:shadow-glow-cyan hover:brightness-110"
               >
                 Get a Free Quote
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

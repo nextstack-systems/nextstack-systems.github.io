@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, CalendarCheck } from 'lucide-react'
 import { Logo } from './Logo'
+import { ThemeToggle } from './ThemeToggle'
 import { CALENDLY } from '../lib/config'
 import { useCta } from '../lib/cta-context'
 
@@ -90,6 +91,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden items-center gap-3 lg:flex">
+          <ThemeToggle />
           <button
             onClick={() => openCta()}
             className="rounded-xl px-4 py-2 text-sm font-semibold text-zinc-200 transition-colors hover:text-white"
@@ -100,20 +102,23 @@ export function Navbar() {
             href={CALENDLY.url}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-2.5 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:shadow-glow-cyan hover:brightness-110"
+            className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-2.5 text-sm font-semibold text-on-brand shadow-glow transition-all duration-300 hover:shadow-glow-cyan hover:brightness-110"
           >
             <CalendarCheck className="h-4 w-4 transition-transform duration-300 group-hover:rotate-12" />
             Book a Call
           </a>
         </div>
 
-        <button
-          onClick={() => setMobileOpen((v) => !v)}
-          className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 text-zinc-200 lg:hidden"
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <ThemeToggle />
+          <button
+            onClick={() => setMobileOpen((v) => !v)}
+            className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 text-zinc-200"
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>
@@ -151,7 +156,7 @@ export function Navbar() {
                   href={CALENDLY.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex-1 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-2.5 text-center text-sm font-semibold text-white"
+                  className="flex-1 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-2.5 text-center text-sm font-semibold text-on-brand"
                 >
                   Book a Call
                 </a>

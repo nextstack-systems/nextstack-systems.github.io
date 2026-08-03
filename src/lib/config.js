@@ -25,9 +25,10 @@ export const SITE = {
 //   CALENDLY_URL is opened by every "Book now" button.
 // -------------------------------------------------------------------------
 export const HUBSPOT = {
-  portalId: '',
+  portalId: '246934536',
+  region: 'na2',
   formId: '',
-  chatEnabled: false,
+  chatEnabled: true,
 }
 
 export const WHATSAPP = {

@@ -96,7 +96,7 @@ export function Process() {
                   className="relative grid gap-5 rounded-3xl border border-white/8 bg-ink-900/70 p-6 sm:grid-cols-[auto_1fr] sm:p-8"
                 >
                   <div className="relative flex items-start gap-4 sm:block">
-                    <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-accent-500 font-display text-base font-bold text-white shadow-glow">
+                    <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-accent-500 font-display text-base font-bold text-on-brand shadow-glow">
                       {p.step}
                     </span>
                   </div>

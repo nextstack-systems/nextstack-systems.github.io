@@ -49,7 +49,7 @@ export function ContactForm({ defaultService = '', compact = false }) {
           href={WHATSAPP.url}
           target="_blank"
           rel="noreferrer"
-          className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[#25d366]/15 px-5 py-2.5 text-sm font-semibold text-[#4ade80] transition-colors hover:bg-[#25d366]/25"
+          className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[#25d366]/15 px-5 py-2.5 text-sm font-semibold text-emerald-400 transition-colors hover:bg-[#25d366]/25"
         >
           Chat on WhatsApp <ArrowUpRight className="h-4 w-4" />
         </a>
@@ -123,7 +123,7 @@ export function ContactForm({ defaultService = '', compact = false }) {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="group flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-5 py-3.5 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:shadow-glow-cyan hover:brightness-110 disabled:opacity-60"
+        className="group flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-5 py-3.5 text-sm font-semibold text-on-brand shadow-glow transition-all duration-300 hover:shadow-glow-cyan hover:brightness-110 disabled:opacity-60"
       >
         {status === 'sending' ? (
           <>
