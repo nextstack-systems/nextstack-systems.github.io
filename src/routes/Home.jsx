@@ -185,7 +185,7 @@ function Hero() {
             transition={{ duration: 0.7, delay: 0.25 }}
             className="mt-6 max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg"
           >
-            From the first conversation to full deployment-websites, online stores, WhatsApp
+            From the first conversation to full deployment - websites, online stores, WhatsApp
             CRMs, marketing funnels and AI automation for{' '}
             <span className="font-medium text-zinc-200">small businesses, professionals and growing enterprises</span>.
           </motion.p>
@@ -397,7 +397,7 @@ function WhyMe() {
     {
       icon: ShieldCheck,
       title: 'Built to convert',
-      desc: 'Every section earns its place-designed to turn visitors into enquiries, not just look pretty.',
+      desc: 'Every section earns its place - designed to turn visitors into enquiries, not just look pretty.',
     },
     {
       icon: Zap,
@@ -407,7 +407,7 @@ function WhyMe() {
     {
       icon: Search,
       title: 'SEO baked in',
-      desc: 'Technical SEO, schema and optimisation handled from day one-not bolted on later.',
+      desc: 'Technical SEO, schema and optimisation handled from day one - not bolted on later.',
     },
     {
       icon: Rocket,
@@ -431,7 +431,7 @@ function WhyMe() {
           <p className="mt-5 text-base leading-relaxed text-zinc-400">
             I've spent {SITE.experienceYears}+ years shipping websites and AI systems for{' '}
             {SITE.industriesServed}+ industries. You work directly with the person who builds,
-            launches and supports your project-no agencies, no hand-offs, no vanishing act.
+            launches and supports your project - no agencies, no hand-offs, no vanishing act.
           </p>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2">

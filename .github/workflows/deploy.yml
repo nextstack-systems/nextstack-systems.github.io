@@ -21,17 +21,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # 1. Install pnpm first before configuring Node caching
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10 # Change this to match your local major version if needed
+
+      # 2. Configure Node and point the native engine cache to pnpm
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
+          cache: pnpm # Changed from 'npm' to 'pnpm'
 
+      # 3. Clean install relying strictly on pnpm-lock.yaml
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
+      # 4. Trigger the pnpm production bundle compiler
       - name: Build
-        run: npm run build
+        run: pnpm run build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

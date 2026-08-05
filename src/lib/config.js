@@ -2,7 +2,7 @@ export const SITE = {
   name: "Abhishek Sharma",
   role: "Full Stack Developer & AI Automation Expert",
   tagline: "I build websites and AI systems that businesses actually use.",
-  email: "hello@abhisheksharma.dev",
+  email: "contactabhisheksharmaji@gmail.com",
   location: "India · Working worldwide",
   experienceYears: 5,
   projectsDelivered: 120,
@@ -363,7 +363,7 @@ export const TESTIMONIALS = [
 
 export const BLOG_POSTS = [
   {
-    slug: "why - small - businesses - need - a - crm",
+    slug: "why-small-businesses-need-a-crm",
     title: "Why your small business needs a CRM before a bigger ad budget",
     excerpt:
       "You can throw money at ads all day, but if leads leak out of your WhatsApp and inbox, you are paying for customers you never talk to. Here is how to plug the leak.",
@@ -373,7 +373,7 @@ export const BLOG_POSTS = [
     cover: "crm",
   },
   {
-    slug: "wordpress - vs - nextjs",
+    slug: "wordpress-vs-nextjs",
     title:
       "WordPress vs Next.js: choosing the right foundation for your website",
     excerpt:
@@ -384,7 +384,7 @@ export const BLOG_POSTS = [
     cover: "stack",
   },
   {
-    slug: "whatsapp - for - business",
+    slug: "whatsapp-for-business",
     title: "WhatsApp Business API in 2026: the complete non-technical guide",
     excerpt:
       "From Meta business verification to template approval to the perfect broadcast - everything a business owner needs to know before going live on WhatsApp.",
@@ -394,7 +394,7 @@ export const BLOG_POSTS = [
     cover: "whatsapp",
   },
   {
-    slug: "automate - first - 30 - days",
+    slug: "automate-first-30-days",
     title:
       "5 automations every service business should set up in its first 30 days",
     excerpt:
@@ -405,7 +405,7 @@ export const BLOG_POSTS = [
     cover: "bot",
   },
   {
-    slug: "landing - page - that - converts",
+    slug: "landing-page-that-converts",
     title: "Anatomy of a landing page that converts (with real examples)",
     excerpt:
       "Headline, proof, objection handling, one clear CTA. The 9 building blocks I use on every funnel page and how to order them for maximum conversion.",
@@ -415,7 +415,7 @@ export const BLOG_POSTS = [
     cover: "funnel",
   },
   {
-    slug: "seo - checklist - 2026",
+    slug: "seo-checklist-2026",
     title:
       "The 2026 SEO checklist: what actually moves the needle for local businesses",
     excerpt:

@@ -83,7 +83,7 @@ export function Services() {
               How to <span className="text-gradient">choose</span>?
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-zinc-400 sm:text-base">
-              Not sure which stack fits? Here's the honest version-most businesses combine one
+              Not sure which stack fits? Here's the honest version - most businesses combine one
               core service with a WhatsApp CRM or automation to close the loop between marketing and
               revenue.
             </p>
@@ -93,13 +93,13 @@ export function Services() {
             {[
               {
                 title: 'Just need a presence?',
-                desc: 'Start with a Business Website-look professional, rank on Google, capture leads.',
+                desc: 'Start with a Business Website - look professional, rank on Google, capture leads.',
                 cta: 'Business Website',
                 slug: 'business-website',
               },
               {
                 title: 'Selling products?',
-                desc: 'Add the Online Store-product listings, orders and deals synced to your CRM.',
+                desc: 'Add the Online Store - product listings, orders and deals synced to your CRM.',
                 cta: 'Online Store',
                 slug: 'online-store',
               },

@@ -24,7 +24,7 @@ const TRACKS = [
     icon: BookOpen,
     title: 'The Fundamentals',
     items: [
-      'Modern web architecture-how the pieces fit together',
+      'Modern web architecture - how the pieces fit together',
       'HTML, CSS, JavaScript and React done properly',
       'WordPress + PHP for client work and quick builds',
       'Next.js and TailwindCSS for fast, SEO-friendly sites',
@@ -46,7 +46,7 @@ const TRACKS = [
     items: [
       'n8n workflows that replace manual busywork',
       'AI chatbots and assistants for real businesses',
-      'CRM integrations-HubSpot, Zoho, WhatsApp API',
+      'CRM integrations - HubSpot, Zoho, WhatsApp API',
       'Marketing automation with Omnisend and funnels',
     ],
   },
@@ -55,7 +55,7 @@ const TRACKS = [
     title: 'The Freelance Business',
     items: [
       'Finding clients and positioning yourself',
-      'Fixed pricing vs hourly-and when to use each',
+      'Fixed pricing vs hourly and when to use each',
       'Contracts, invoicing and getting paid on time',
       'Turning one-off projects into retainers',
     ],
@@ -69,7 +69,7 @@ const FORMATS = [
     priceLabel: 'Monthly',
     desc: 'Weekly 1-on-1 calls, a personal roadmap, code reviews and async support between sessions. Best for serious career builders.',
     features: [
-      '4 x 60-min private sessions / month',
+      '4 x 60-min private sessions/month',
       'Personalised learning roadmap',
       'Code reviews on your projects',
       'Async chat support on WhatsApp',
@@ -96,7 +96,7 @@ const FORMATS = [
     desc: 'Book a single session to unblock a specific problem-a bug, a workflow, a pricing question or a code review.',
     features: [
       'Book any single 60-min session',
-      'Bring your own project / problem',
+      'Bring your own project/problem',
       'Practical, actionable answers',
       'Recording sent after the call',
       'No long-term commitment',
@@ -132,11 +132,11 @@ export function Mentorship() {
         eyebrow="Mentorship"
         title={
           <>
-            Learn to build <span className="text-gradient">real websites & AI systems</span>-and
+            Learn to build <span className="text-gradient">real websites & AI systems</span> and
             get paid for it
           </>
         }
-        description="I mentor developers, career switchers and freelancers who want to go from learning to shipping client-ready work with modern tools-WordPress, React, Next.js, n8n and AI."
+        description="I mentor developers, career switchers and freelancers who want to go from learning to shipping client-ready work with modern tools - WordPress, React, Next.js, n8n and AI."
       >
         <div className="flex flex-wrap items-center gap-4">
           <a

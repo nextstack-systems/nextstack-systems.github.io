@@ -41,7 +41,7 @@ const VALUES = [
   {
     icon: ShieldCheck,
     title: 'Radical clarity',
-    desc: 'Plain-language updates, fixed prices and written deliverables. You should never be confused about your own project.',
+    desc: 'Plain language updates, fixed prices and written deliverables. You should never be confused about your own project.',
   },
   {
     icon: HeartHandshake,
@@ -95,11 +95,13 @@ export function About() {
         eyebrow="About me"
         title={
           <>
-            I'm {SITE.name} - and I build systems that{' '}
+            I'm {SITE.name} 
+            <br></br>
+            <span>and I build systems that{' '}</span>
             <span className="text-gradient">actually get used</span>
           </>
         }
-        description="Full stack developer and AI automation expert with 5+ years of experience. I help businesses go from 'how do we get online?' to a fully deployed, revenue-driving web presence."
+        description="Full stack developer and AI automation expert with 5+ years of experience. I help businesses go from 'how do we get online?' to a fully deployed, revenue - driving web presence."
       />
 
       <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
@@ -119,7 +121,7 @@ export function About() {
               <p>
                 What makes my work different is the focus on outcomes: a café wants reservations, a
                 clinic wants bookings, a startup wants investor leads. I design and build with that
-                end in mind, then keep the systems running after launch-hosting, domain, email,
+                end in mind, then keep the systems running after launch - hosting, domain, email,
                 CRMs and automation included.
               </p>
               <p>
