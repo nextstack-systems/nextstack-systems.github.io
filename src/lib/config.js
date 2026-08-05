@@ -42,7 +42,7 @@ export const WHATSAPP = {
 };
 
 export const CALENDLY = {
-  url: "https://calendly.com/abhisheksharma/intro - call",
+  url: "https://calendly.com/contactabhisheksharmaji/30min",
 };
 
 //  -  -  -  -  -  HubSpot Forms API submit  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
