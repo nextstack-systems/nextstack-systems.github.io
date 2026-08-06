@@ -14,7 +14,7 @@ import {
   Briefcase,
   Building2,
 } from 'lucide-react'
-import { SITE, SERVICES, INDUSTRIES, TESTIMONIALS, PROCESS_STEPS, CALENDLY } from '../lib/config'
+import { SITE, SERVICES, INDUSTRIES, TESTIMONIALS, PROCESS_STEPS } from '../lib/config'
 import { Reveal, Stagger, StaggerItem } from '../components/Reveal'
 import { SectionHeading } from '../components/SectionHeading'
 import { Counter } from '../components/Counter'
@@ -23,6 +23,7 @@ import { ServiceCard } from '../components/ServiceCard'
 import { ServiceIcon } from '../components/icons'
 import { CtaBanner } from '../components/CtaBanner'
 import { useCta } from '../lib/cta-context'
+import CalendlyModal from '../components/CalendlyModal'
 
 function HeroCard() {
   const mx = useMotionValue(0)
@@ -203,15 +204,7 @@ function Hero() {
               Start Your Project
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </button>
-            <a
-              href={CALENDLY.url}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-2xl border border-white/15 px-7 py-4 text-sm font-semibold text-zinc-200 transition-colors hover:border-brand-400 hover:text-white"
-            >
-              <CalendarCheck className="h-4 w-4 text-brand-300" />
-              Book a Free Call
-            </a>
+            <CalendlyModal text="Book a Free Call" variant="outline" />
           </motion.div>
 
           <motion.div

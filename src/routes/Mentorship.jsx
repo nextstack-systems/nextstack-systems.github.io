@@ -18,6 +18,7 @@ import { Stagger, StaggerItem } from '../components/Reveal'
 import { SectionHeading } from '../components/SectionHeading'
 import { CtaBanner } from '../components/CtaBanner'
 import { CALENDLY } from '../lib/config'
+import CalendlyModal from '../components/CalendlyModal'
 
 const TRACKS = [
   {
@@ -139,15 +140,7 @@ export function Mentorship() {
         description="I mentor developers, career switchers and freelancers who want to go from learning to shipping client-ready work with modern tools - WordPress, React, Next.js, n8n and AI."
       >
         <div className="flex flex-wrap items-center gap-4">
-          <a
-            href={CALENDLY.url}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-brand-600 to-brand-500 px-6 py-3.5 text-sm font-semibold text-on-brand shadow-glow transition-all duration-300 hover:scale-[1.03] hover:shadow-glow-cyan"
-          >
-            <CalendarCheck className="h-4 w-4" />
-            Book a Mentorship Intro Call
-          </a>
+          <CalendlyModal text="Book a Mentorship Intro Call" variant="primary" />
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-ink-900/70 px-4 py-2 text-sm text-zinc-300">
             <GraduationCap className="h-4 w-4 text-brand-300" />
             Limited to 5 active mentees
@@ -233,18 +226,9 @@ export function Mentorship() {
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href={CALENDLY.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={`mt-7 rounded-xl px-5 py-3 text-center text-sm font-semibold transition-all duration-300 ${
-                      i === 1
-                        ? 'bg-gradient-to-r from-brand-600 to-brand-500 text-on-brand shadow-glow hover:brightness-110'
-                        : 'border border-brand-500/40 text-brand-300 hover:bg-brand-500/10'
-                    }`}
-                  >
-                    Book this format
-                  </a>
+                  <div className="mt-7 rounded-xl px-5 py-3 text-center text-sm font-semibold transition-all duration-300">
+                    <CalendlyModal text="Book this format" variant={i === 1 ? 'primary' : 'outline'} />
+                  </div>
                 </motion.div>
               </StaggerItem>
             ))}

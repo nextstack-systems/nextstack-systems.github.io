@@ -5,6 +5,7 @@ import { Mail, MapPin, MessageCircle, ArrowUpRight } from 'lucide-react'
 import { Logo } from './Logo'
 import { SITE, WHATSAPP, CALENDLY, SERVICES } from '../lib/config'
 import { useCta } from '../lib/cta-context'
+import CalendlyModal from './CalendlyModal'
 
 export function Footer() {
   const { openCta } = useCta()
@@ -97,14 +98,7 @@ export function Footer() {
                 Get a Free Quote
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </button>
-              <a
-                href={CALENDLY.url}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 px-4 py-2.5 text-sm font-semibold text-zinc-200 transition-colors hover:border-brand-400 hover:text-white"
-              >
-                Book a Discovery Call
-              </a>
+              <CalendlyModal variant="outline" />
             </div>
           </div>
         </div>

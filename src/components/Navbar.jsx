@@ -7,8 +7,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, CalendarCheck } from 'lucide-react'
 import { Logo } from './Logo'
 import { ThemeToggle } from './ThemeToggle'
-import { CALENDLY } from '../lib/config'
 import { useCta } from '../lib/cta-context'
+import CalendlyModal from './CalendlyModal'
 
 const NAV = [
   { to: '/', label: 'Home' },
@@ -98,15 +98,7 @@ export function Navbar() {
           >
             Get a Quote
           </button>
-          <a
-            href={CALENDLY.url}
-            target="_blank"
-            rel="noreferrer"
-            className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-2.5 text-sm font-semibold text-on-brand shadow-glow transition-all duration-300 hover:shadow-glow-cyan hover:brightness-110"
-          >
-            <CalendarCheck className="h-4 w-4 transition-transform duration-300 group-hover:rotate-12" />
-            Book a Call
-          </a>
+          <CalendlyModal variant="primary" />
         </div>
 
         <div className="flex items-center gap-2 lg:hidden">
@@ -152,14 +144,7 @@ export function Navbar() {
                 >
                   Get a Quote
                 </button>
-                <a
-                  href={CALENDLY.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex-1 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-2.5 text-center text-sm font-semibold text-on-brand"
-                >
-                  Book a Call
-                </a>
+                <CalendlyModal />
               </div>
             </div>
           </motion.div>

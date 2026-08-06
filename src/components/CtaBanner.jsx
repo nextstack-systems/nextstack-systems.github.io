@@ -5,6 +5,7 @@ import { ArrowUpRight, CalendarCheck, MessageCircle } from 'lucide-react'
 import { CALENDLY, WHATSAPP } from '../lib/config'
 import { useCta } from '../lib/cta-context'
 import { Reveal } from './Reveal'
+import CalendlyModal from './CalendlyModal'
 
 export function CtaBanner() {
   const { openCta } = useCta()
@@ -44,15 +45,7 @@ export function CtaBanner() {
                 Get a Free Quote
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </button>
-              <a
-                href={CALENDLY.url}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-2xl border border-white/15 px-7 py-4 text-sm font-semibold text-zinc-200 transition-colors hover:border-brand-400 hover:text-white"
-              >
-                <CalendarCheck className="h-4 w-4 text-brand-300" />
-                Book a Discovery Call
-              </a>
+              <CalendlyModal variant="outline" />
               <a
                 href={WHATSAPP.url}
                 target="_blank"
