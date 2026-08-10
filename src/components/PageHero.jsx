@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { Reveal } from './Reveal'
 
-export function PageHero({ eyebrow, title, description, children }) {
+export function PageHero({ eyebrow, title, description, children, centered = false }) {
   return (
     <section className="relative overflow-hidden pb-16 pt-32 sm:pb-20 sm:pt-40">
       <div className="pointer-events-none absolute inset-0 grid-bg opacity-70" />
@@ -15,7 +15,7 @@ export function PageHero({ eyebrow, title, description, children }) {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-3xl"
+          className={centered ? 'mx-auto max-w-3xl text-center' : 'max-w-3xl'}
         >
           {eyebrow && (
             <span className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-300">
@@ -31,7 +31,9 @@ export function PageHero({ eyebrow, title, description, children }) {
               {description}
             </p>
           )}
-          {children && <div className="mt-8">{children}</div>}
+          {children && (
+            <div className={centered ? 'mt-8 flex justify-center' : 'mt-8'}>{children}</div>
+          )}
         </motion.div>
       </div>
     </section>

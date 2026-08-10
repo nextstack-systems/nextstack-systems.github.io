@@ -70,16 +70,19 @@ export function ServiceDetail() {
 
   return (
     <>
-      <div className="relative">
-        <Link
-          href="/services"
-          className="absolute left-4 top-24 z-10 inline-flex items-center gap-1.5 text-sm font-semibold text-zinc-400 transition-colors hover:text-brand-300 sm:left-6 sm:top-28 lg:left-8"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          All services
-        </Link>
+      <section className="flex flex-col items-center">
+        <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Link
+            href="/services"
+            className="mt-18 inline-flex items-center gap-1.5 text-sm font-semibold text-zinc-400 transition-colors hover:text-brand-300"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            All services
+          </Link>
+        </div>
 
         <PageHero
+          centered
           eyebrow="Service Details"
           title={
             firstName ? (
@@ -92,7 +95,7 @@ export function ServiceDetail() {
           }
           description={service.short}
         >
-          <div className="flex flex-wrap items-center gap-5 rounded-2xl border border-white/10 bg-ink-900/70 p-5 sm:p-6">
+          <div className="flex flex-wrap items-center justify-center gap-5 rounded-2xl border border-white/10 bg-ink-900/70 p-5 sm:p-6">
             <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-brand-500/10 text-brand-300">
               <ServiceIcon name={service.icon} className="h-7 w-7" />
             </span>
@@ -109,7 +112,7 @@ export function ServiceDetail() {
                 )}
               </p>
             </div>
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center justify-center gap-3">
               <button
                 onClick={() => openCta(service.name)}
                 className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-5 py-3 text-sm font-semibold text-on-brand shadow-glow transition-all duration-300 hover:brightness-110 hover:shadow-glow-cyan"
@@ -121,7 +124,7 @@ export function ServiceDetail() {
             </div>
           </div>
         </PageHero>
-      </div>
+      </section>
 
       <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
         <SectionHeading
@@ -192,7 +195,7 @@ export function ServiceDetail() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      {/* <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Gallery & Demos"
           title={
@@ -222,7 +225,7 @@ export function ServiceDetail() {
             </StaggerItem>
           ))}
         </Stagger>
-      </section>
+      </section> */}
 
       <CtaBanner />
     </>

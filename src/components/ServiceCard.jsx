@@ -71,7 +71,7 @@ export function ServiceCard({ service, compact = false }) {
           Start this project
         </button>
         <Link
-          href={`/services#${service.slug}`}
+          href={`/services/${service.slug}`}
           className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 text-zinc-400 transition-all duration-300 hover:border-brand-400 hover:text-white"
           aria-label={`View ${service.name} details`}
         >

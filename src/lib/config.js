@@ -76,9 +76,20 @@ export async function submitToHubSpot(fields) {
   return { ok: res.ok, simulated: false, status: res.status };
 }
 
+// Email Form Worker URL (for serverless form submission)
+export async function submitToEmailFormWorker(fields) {
+  const res = await fetch("https://email-form-worker.actabhishek.workers.dev", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(fields),
+  });
+
+  return { ok: res.ok, status: res.status };
+}
+
 export const SERVICES = [
   {
-    slug: "business - website",
+    slug: "business-website",
     name: "Business Website",
     icon: "globe",
     price: 10000,
@@ -90,11 +101,14 @@ export const SERVICES = [
       "Core pages: Home, Services, About Us, Contact Us",
       "Speed, security & SEO optimisation plugins",
       "Complete 1 Year Bundle: Domain, Hosting, and Professional Email",
-      "HubSpot integration - form submissions & live visitor chat",
+      "Form submissions",
+      "Free Domain registration and hosting setup",
+      "Free Mailbox setup for professional email",
+      "Free 30 days support after launch",
     ],
   },
   {
-    slug: "online - store",
+    slug: "online-store",
     name: "Business Website + Online Store",
     icon: "shopping - bag",
     price: 20000,
@@ -106,14 +120,17 @@ export const SERVICES = [
       "Website design & development - WordPress / PHP / Next.js",
       "Pages: Home, Shop, Gallery, Blog, About, Contact, Privacy Policy, Terms & Conditions",
       "WooCommerce store setup + product listings (image refinement, details, product SEO)",
-      "HubSpot integration - order & deal management",
+      "HubSpot integration - order & deal management, form submissions, live visitor chat",
+      "Payment gateway integration - Stripe, PayPal, Razorpay",
       "Speed, security & SEO optimisation plugins",
       "Complete 1 Year Bundle: Domain, Hosting, and Professional Email",
-      "HubSpot integration - form submissions & live visitor chat",
+      "Free Domain registration and hosting setup",
+      "Free Mailbox setup for professional email",
+      "Free 30 days support after launch",
     ],
   },
   {
-    slug: "marketing - funnels",
+    slug: "marketing-funnels",
     name: "High Converting Marketing Funnels",
     icon: "filter",
     price: 10000,
@@ -154,7 +171,7 @@ export const SERVICES = [
     ],
   },
   {
-    slug: "whatsapp - crm",
+    slug: "whatsapp-crm",
     name: "WhatsApp CRM Hosting & Integration",
     icon: "message - circle",
     price: 10000,
@@ -175,7 +192,7 @@ export const SERVICES = [
     ],
   },
   {
-    slug: "ai - automation",
+    slug: "ai-automation",
     name: "AI Automation with n8n",
     icon: "bot",
     price: 20000,
